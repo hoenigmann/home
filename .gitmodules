@@ -1,0 +1,12 @@
+[submodule "swd/sicp"]
+	path = swd/sicp
+	url = git@github.com:hoenigmann/sicp.git
+[submodule "swd/reasoned-schemer"]
+	path = swd/reasoned-schemer
+	url = git@github.com:hoenigmann/reasoned-schemer.git
+[submodule "swd/caris-report"]
+	path = swd/caris-report
+	url = git@github.com:klutometis/caris-report.git
+[submodule ".oh-my-zsh"]
+	path = .oh-my-zsh
+	url = git://github.com/robbyrussell/oh-my-zsh.git

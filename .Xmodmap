@@ -1,0 +1,36 @@
+clear lock
+clear control
+clear mod1
+clear mod2
+clear mod3
+clear mod4
+clear mod5
+
+keycode 133 = Meta_L Alt_L
+keycode 134 = Meta_R Alt_R
+keycode 66  = Control_L
+keycode 37  = Control_L
+keycode 64  = Multi_key
+keycode 108 = Multi_key
+
+add control = Control_L Control_R
+add mod1 = Meta_L Meta_R
+
+! Thanks, Olin; thanks, Kragen:
+! <http://canonical.org/~kragen/setting-up-keyboard.html>,
+! <http://lists.canonical.org/pipermail/kragen-hacks/2002-January/000306.html>.
+! keysym bracketleft = parenleft braceleft
+! keysym bracketright = parenright braceright
+! keysym parenleft = 9 bracketleft
+! keysym parenright = 0 bracketright
+keycode 18 = 9 braceleft
+keycode 19 = 0 braceright
+keycode 34 = parenleft bracketleft
+keycode 35 = parenright bracketright
+
+! Thanks, Thomas Parslow:
+! <http://almostobsolete.net/switch-brackets-with-xmodmap.html>
+! keysym braceleft = parenleft bracketleft
+! keysym braceright = parenright bracketright
+! keysym 9 = 9 braceleft
+! keysym 0 = 0 braceright

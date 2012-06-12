@@ -1,0 +1,51 @@
+XTerm*foreground: white
+XTerm*background: black
+XTerm*scrollBar: false
+
+! Fix meta behaviour
+XTerm*eightBitInput: false
+
+! Appears to fix the default 80x24 behaviour
+XTerm*waitForMap: true
+
+! Replete with unicode chars
+!XTerm*faceName: DejaVu Sans Mono
+XTerm*faceName: DejaVu Sans Mono:style=Bold
+XTerm*faceSize: 11.0
+! XTerm*font: -misc-fixed-medium-r-semicondensed--13-120-75-75-c-60-iso10646-1
+! XTerm*font: -adobe-courier-bold-r-normal--24-240-75-75-m-150-iso10646-1
+! XTerm*font: -adobe-courier-medium-r-normal--12-120-75-75-m-70-iso10646-1
+! XTerm*font: -misc-fixed-medium-r-normal--13-120-75-75-c-80-iso10646-1
+! Presentations
+! -misc-fixed-medium-r-normal--20-200-75-75-c-100-iso10646-1
+! -adobe-courier-bold-r-normal--20-140-100-100-m-110-iso10646-1
+! -adobe-courier-bold-r-normal--24-240-75-75-m-150-iso10646-1
+! -adobe-courier-bold-r-normal--34-240-100-100-m-200-iso10646-1
+! -b&h-lucidatypewriter-bold-r-normal-sans-24-240-75-75-m-140-iso10646-1
+! -b&h-lucidatypewriter-bold-r-normal-sans-25-180-100-100-m-150-iso10646-1
+! -b&h-lucidatypewriter-bold-r-normal-sans-26-190-100-100-m-159-iso10646-1
+! -b&h-lucidatypewriter-bold-r-normal-sans-34-240-100-100-m-200-iso10646-1
+! -b&h-lucidatypewriter-medium-r-normal-sans-24-240-75-75-m-140-iso10646-1
+! -b&h-lucidatypewriter-medium-r-normal-sans-25-180-100-100-m-150-iso10646-1
+! -b&h-lucidatypewriter-medium-r-normal-sans-26-190-100-100-m-159-iso10646-1
+! -b&h-lucidatypewriter-medium-r-normal-sans-34-240-100-100-m-200-iso10646-1
+
+! Either of these are great for presentations:
+! -adobe-courier-bold-r-normal--24-240-75-75-m-150-iso10646-1
+! -adobe-courier-bold-r-normal--34-240-100-100-m-200-iso10646-1
+
+! Set utf8 regardless of locale?
+XTerm*utf8: 2
+
+! Allow ratpoison to send meta key
+XTerm*allowSendEvents: true
+
+! MIT-Scheme-wesen
+edwin*foreground: white
+edwin*background: black
+
+! Interesting? does not seem to work
+XTerm.perl-ext-common: default,matcher
+XTerm.urlLauncher: firefox
+XTerm.matcher.button: 2
+XTerm.matcher.pattern.1: \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]

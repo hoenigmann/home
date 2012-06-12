@@ -1,0 +1,15 @@
+[user]
+	name = Albert Hoenigmann
+	email = hoenigmann@gmail.com
+
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+
+[status]
+  relativePaths = false
+  showUntrackedFiles = no
+
+[core]
+  pager = less -i -R

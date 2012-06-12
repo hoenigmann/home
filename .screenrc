@@ -1,0 +1,76 @@
+# Turn startup message off
+startup_message off
+
+# Unicode hack
+defutf8 on
+
+# Scroll-back buffer
+defscrollback 1000
+
+# Turn off annoying visual bell.
+vbell off
+
+# Alternate messages
+nethack on
+
+# Dynamic window-titles based on PS1.
+shelltitle '% |zsh'
+
+# Check battery status every minute.
+backtick 1 60 60 battery
+
+# Status line
+hardstatus off
+hardstatus alwayslastline
+hardstatus string '%{= kw}%-Lw%{+s}%n%f* %t%{-}%+Lw%=%1` | %D %M %d %c:%s %Y'
+
+# Bindings
+bind f eval "hardstatus ignore"
+bind F eval "hardstatus alwayslastline"
+
+# Lower-case copy and paste
+bind ( copy
+bind ) paste .
+
+# Read and paste
+bind y eval "exec sh -c 'xsel > /tmp/screen-exchange'" "readbuf" "paste ."
+
+# http://snarfed.org/synchronizing_gnu_screens_paste_buffer_and_the_x_selection
+# set the second mark, write to the screen-exchange
+# file, and use xsel to synchronize the paste buffer
+# with the X selection.
+bindkey -m > eval "stuff ' '" writebuf "exec sh -c 'xsel -b < /tmp/screen-exchange'"
+
+# http://snarfed.org/emacs_keybindings_in_gnu_screens_copy-scrollback_mode
+# emacs keybindings for navigation in copy mode
+markkeys ^B=Y:^F=V:h=^B:l=^F:0=^A:$=^E
+
+# C-space sets mark. markkeys does it in screen 4.0 and higher, but 3.9x
+# needs the bindkey command. (note the ^@ escape sequence for C-space.)
+markkeys ' '=^@
+# bindkey -m ^@ stuff ' '
+
+# page up and page down
+bindkey -m -k kP stuff Y
+bindkey -m -k kN stuff V
+
+# failed attempt to make C-space work in i-search too
+# bindkey -m ^@ eval "stuff \033" "stuff ^@" 
+
+# special hack for C-e, since it should go *past*
+# the last char. -m means this is for copy mode only.
+bindkey -m ^e stuff "$^f"
+
+# C-g and other keys just quit copy mode. Esc does nothing.
+markkeys \033=\015=^G=^D=h=j=k=l=H=M=L=G=g=y=c=v=a=x=b=e=B=E=w
+markkeys @=\033
+
+# control arrows move by words. (set B, e, and w to F keys so that i can
+# use them to move by words, but they themselves still quit copy mode.)
+markkeys B=[:E=]:b={:e=}:w=>
+bindkey -m ^[Od stuff {  #"[[}"
+bindkey -m ^[Oc stuff ]  #"}]^f"
+
+# M-< and M-> for start/end of buffer (don't seem to work).
+bindkey -m "^[<" stuff "g"
+bindkey -m "^[>" stuff "G"
