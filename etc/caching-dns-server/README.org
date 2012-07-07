@@ -1,0 +1,7 @@
+* README
+  Taken from [[http://www.madboa.com/geek/soho-bind/][here]]; adjusted slightly. Naming in =*.zone= activates
+  Emacs' zone-mode.
+
+  What's the spacing convention for zone files?
+
+  Is there a named.conf mode?
