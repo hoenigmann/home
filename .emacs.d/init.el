@@ -135,3 +135,7 @@
 ;;; git commit-comments.
 (eval-after-load "flyspell"
   '(defun flyspell-mode (&optional arg)))
+
+(setq inferior-lisp-program "/usr/bin/clisp")
+
+(setq visible-bell nil)
