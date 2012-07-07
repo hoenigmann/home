@@ -1,0 +1,10 @@
+$TTL 1D
+$ORIGIN 0.0.127.in-addr.arpa.
+@ IN SOA localhost. root.localhost. (
+         2
+         8H
+         15M
+         1W
+         1D)
+  IN NS localhost.
+1 IN PTR localhost.
